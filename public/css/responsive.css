@@ -39,7 +39,7 @@
     display: none;
   }
 
-  .ad-slot-header {
+  .sponsor-space-header {
     min-height: var(--ad-header-height);
   }
 
@@ -139,11 +139,11 @@
     padding-inline: 12px;
   }
 
-  .ad-slot {
+  .sponsor-space {
     font-size: 8px;
   }
 
-  .ad-slot-header {
+  .sponsor-space-header {
     min-height: var(--ad-header-height);
   }
 

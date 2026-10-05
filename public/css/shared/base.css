@@ -84,7 +84,7 @@ html.scrollbars-visible *::-webkit-scrollbar-track {
   font-size: 15px;
 }
 
-.ad-slot {
+.sponsor-space {
   position: relative;
   display: flex;
   width: 100%;
@@ -99,7 +99,7 @@ html.scrollbars-visible *::-webkit-scrollbar-track {
   font-size: 9px;
 }
 
-.ad-slot > span:first-child {
+.sponsor-space > span:first-child {
   padding: 3px 5px;
   border: 1px solid #d6d6cc;
   border-radius: 2px;
@@ -108,7 +108,7 @@ html.scrollbars-visible *::-webkit-scrollbar-track {
   letter-spacing: 0.12em;
 }
 
-.ad-slot-header {
+.sponsor-space-header {
   position: sticky;
   z-index: 7;
   top: 0;
@@ -119,7 +119,7 @@ html.scrollbars-visible *::-webkit-scrollbar-track {
   background: var(--paper);
 }
 
-.ad-slot-footer {
+.sponsor-space-footer {
   position: fixed;
   z-index: 8;
   right: 0;
@@ -153,13 +153,13 @@ body.dark-mode .auth-status {
   color: #c0c8dd;
 }
 
-body.dark-mode .ad-slot {
+body.dark-mode .sponsor-space {
   border-color: #424b45;
   background: #202724;
   color: #a5aea6;
 }
 
-body.dark-mode .ad-slot > span:first-child {
+body.dark-mode .sponsor-space > span:first-child {
   border-color: #424b45;
 }
 
