@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PortoSite membantu siapa saja membuat website portofolio tanpa coding."
+    />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>PortoSite — Bikin portofolio sendiri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared/base.css?v=16" />
+    <link rel="stylesheet" href="css/features/customization.css?v=16" />
+    <link rel="stylesheet" href="css/features/editor.css?v=16" />
+    <link rel="stylesheet" href="css/features/preview.css?v=16" />
+    <link rel="stylesheet" href="css/responsive.css?v=17" />
+  </head>
+  <body>
+    <div class="ad-slot ad-slot-header" aria-label="Ruang iklan">
+      <span data-i18n="adLabel">RUANG IKLAN</span>
+      <span data-i18n="adHeader">Slot iklan header</span>
+    </div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="PortoSite">
+        <span class="brand-mark" aria-hidden="true"><span class="logo-p">P</span><span class="logo-dot"></span></span>
+        <span>Porto<span class="brand-site">Site</span><span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-center">
+        <span class="step active"><i>1</i> <span data-i18n="stepData">Isi data</span></span>
+        <span class="step-line"></span>
+        <span class="step active"><i>2</i> <span data-i18n="stepPreview">Preview</span></span>
+        <span class="step-line"></span>
+        <span class="step"><i>3</i> <span data-i18n="stepPublish">Terbitkan</span></span>
+      </div>
+      <div class="header-actions">
+        <button class="utility-button language-button" id="language-button" type="button" aria-label="Switch language">EN</button>
+        <button class="utility-button theme-button" id="theme-button" type="button" aria-label="Toggle dark mode"><span aria-hidden="true">☾</span></button>
+        <a class="help-link" href="#panduan"><span data-i18n="howItWorks">Cara kerja</span> <span>↗</span></a>
+      </div>
+    </header>
+
+    <main class="builder">
+      <section class="editor" aria-labelledby="builder-title">
+        <div class="editor-heading">
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">PORTOFOLIO PERTAMAMU</p>
+            <h1 id="builder-title"><span data-i18n="pageTitle">Ceritakan tentang dirimu</span><span>.</span></h1>
+          </div>
+          <span class="saved-indicator" id="saved-indicator"><i></i><span data-i18n="saved">Tersimpan di browser</span></span>
+        </div>
+        <p class="intro" data-i18n="intro">Isi bagian yang kamu mau. Website-nya akan terbentuk otomatis—nggak perlu nulis kode.</p>
+
+        <form id="portfolio-form">
+          <section class="form-section">
+            <div class="form-section-heading">
+              <span class="section-number">01</span>
+              <div><h2 data-i18n="aboutYou">Kenalan dulu</h2><p data-i18n="aboutYouHint">Info singkat yang tampil paling depan.</p></div>
+            </div>
+            <div class="photo-control">
+              <label class="photo-preview" for="photo" id="photo-preview">
+                <span id="photo-placeholder">+</span>
+                <img id="photo-image" alt="Foto profil pilihanmu" data-i18n-alt="photoAlt" hidden />
+              </label>
+              <div class="photo-copy">
+                <label class="upload-label" for="photo"><span data-i18n="uploadPhoto">Unggah foto profil</span> <span class="field-optional" data-i18n="optional">Opsional</span></label>
+                <p data-i18n="photoHint">JPG, PNG, atau WebP. Maksimal 2 MB.</p>
+                <input class="visually-hidden" id="photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp" />
+                <button class="remove-photo" id="remove-photo" type="button" data-i18n="removePhoto" hidden>Hapus foto</button>
+              </div>
+            </div>
+            <div class="field-grid">
+              <label class="field"><span data-i18n="fullName">Nama lengkap</span> <span class="required-marker">*</span>
+                <input name="name" required maxlength="80" placeholder="Contoh: Azmi Aziz" data-i18n-placeholder="namePlaceholder" autocomplete="name" />
+              </label>
+              <label class="field"><span data-i18n="role">Profesi atau peran</span>
+                <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="role" maxlength="80" placeholder="Contoh: Mahasiswa & UI Designer" data-i18n-placeholder="rolePlaceholder" />
+              </label>
+              <label class="field"><span data-i18n="location">Lokasi</span>
+                <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="location" maxlength="80" placeholder="Contoh: Yogyakarta, Indonesia" data-i18n-placeholder="locationPlaceholder" />
+              </label>
+              <label class="field"><span data-i18n="email">Email untuk dihubungi</span>
+                <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="email" type="email" maxlength="120" placeholder="nama@email.com" data-i18n-placeholder="emailPlaceholder" autocomplete="email" />
+              </label>
+              <label class="field full-width"><span data-i18n="bio">Tentang dirimu</span>
+                <span class="field-optional" data-i18n="optional">Opsional</span>
+                <textarea name="bio" maxlength="500" rows="3" placeholder="Ceritakan siapa dirimu, hal yang kamu sukai, dan apa yang sedang kamu kerjakan..." data-i18n-placeholder="bioPlaceholder"></textarea>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="form-section-heading">
+              <span class="section-number">02</span>
+              <div><h2 data-i18n="work">Yang pernah kamu kerjakan</h2><p data-i18n="workHint">Tambahkan proyek, pengalaman, dan pendidikan.</p></div>
+            </div>
+            <div class="repeat-group">
+              <div class="repeat-heading"><h3 data-i18n="projects">Proyek</h3>              <span class="optional" data-i18n="optional">Opsional</span></div>
+              <div id="projects-fields" class="repeat-fields"></div>
+              <button class="add-button" type="button" data-add="project" data-i18n="addProject">+ Tambah proyek</button>
+            </div>
+            <div class="repeat-group">
+              <div class="repeat-heading"><h3 data-i18n="experience">Pengalaman</h3>              <span class="optional" data-i18n="optional">Opsional</span></div>
+              <div id="experience-fields" class="repeat-fields"></div>
+              <button class="add-button" type="button" data-add="experience" data-i18n="addExperience">+ Tambah pengalaman</button>
+            </div>
+            <div class="repeat-group">
+              <div class="repeat-heading"><h3 data-i18n="education">Pendidikan</h3>              <span class="optional" data-i18n="optional">Opsional</span></div>
+              <div id="education-fields" class="repeat-fields"></div>
+              <button class="add-button" type="button" data-add="education" data-i18n="addEducation">+ Tambah pendidikan</button>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="form-section-heading">
+              <span class="section-number">03</span>
+              <div><h2 data-i18n="findable">Biar mudah ditemukan</h2><p data-i18n="findableHint">Tambahkan keahlian dan tautan sosial mediamu.</p></div>
+            </div>
+            <label class="field"><span data-i18n="skills">Keahlian</span> <span class="field-hint" data-i18n="commaSeparated">Pisahkan dengan koma</span>
+              <span class="field-optional" data-i18n="optional">Opsional</span>
+              <input name="skills" maxlength="240" placeholder="Contoh: Desain, Figma, Komunikasi" data-i18n-placeholder="skillsPlaceholder" />
+            </label>
+            <div class="social-fields-heading">
+              <h3 data-i18n="socialAccounts">Akun media sosial</h3>
+              <span class="optional" data-i18n="optional">Opsional</span>
+            </div>
+            <div class="field-grid social-fields">
+              <label class="field"><span data-i18n="instagram">Instagram</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <span class="input-prefix">instagram.com/<input name="instagram" aria-label="Nama pengguna Instagram" data-i18n-aria="instagramUsername" maxlength="50" placeholder="username" /></span>
+              </label>
+              <label class="field"><span data-i18n="linkedin">LinkedIn</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="linkedin" placeholder="https://linkedin.com/in/..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="github">GitHub</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="github" placeholder="https://github.com/..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="website">Situs atau sosial lainnya</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="website" placeholder="https://..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="whatsapp">WhatsApp</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="whatsapp" type="tel" inputmode="tel" placeholder="+62 812 3456 7890" data-i18n-placeholder="whatsappPlaceholder" maxlength="30" />
+              </label>
+              <label class="field"><span data-i18n="tiktok">TikTok</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="tiktok" type="url" placeholder="https://tiktok.com/@..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="facebook">Facebook</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="facebook" type="url" placeholder="https://facebook.com/..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="youtube">YouTube</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="youtube" type="url" placeholder="https://youtube.com/@..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="xSocial">X</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="xSocial" type="url" placeholder="https://x.com/..." maxlength="200" />
+              </label>
+              <label class="field"><span data-i18n="telegram">Telegram</span> <span class="field-optional" data-i18n="optional">Opsional</span>
+                <input name="telegram" type="url" placeholder="https://t.me/..." maxlength="200" />
+              </label>
+            </div>
+          </section>
+
+          <section class="form-section customization-section">
+            <div class="form-section-heading">
+              <span class="section-number">04</span>
+              <div><h2 data-i18n="customize">Sesuaikan tampilan</h2><p data-i18n="customizeHint">Pilih gaya yang paling mewakili dirimu.</p></div>
+            </div>
+            <div class="customize-options">
+              <fieldset class="customize-group">
+                <legend data-i18n="accentColor">Warna aksen</legend>
+                <div class="palette-options">
+                  <button class="palette-choice selected" type="button" data-palette="blue" aria-label="Ocean blue" title="Ocean blue"><i></i><span data-i18n="ocean">Ocean</span></button>
+                  <button class="palette-choice" type="button" data-palette="green" aria-label="Forest green" title="Forest green"><i></i><span data-i18n="forest">Forest</span></button>
+                  <button class="palette-choice" type="button" data-palette="violet" aria-label="Violet" title="Violet"><i></i><span data-i18n="violet">Violet</span></button>
+                  <button class="palette-choice" type="button" data-palette="sunset" aria-label="Sunset" title="Sunset"><i></i><span data-i18n="sunset">Sunset</span></button>
+                </div>
+              </fieldset>
+              <fieldset class="customize-group">
+                <legend data-i18n="layout">Tata letak</legend>
+                <div class="layout-options">
+                  <button class="layout-choice selected" type="button" data-layout-choice="editorial"><span class="layout-icon layout-editorial"><i></i><i></i><i></i></span><span data-i18n="editorial">Editorial</span></button>
+                  <button class="layout-choice" type="button" data-layout-choice="minimal"><span class="layout-icon layout-minimal"><i></i><i></i></span><span data-i18n="minimal">Minimal</span></button>
+                  <button class="layout-choice" type="button" data-layout-choice="split"><span class="layout-icon layout-split"><i></i><i></i></span><span data-i18n="split">Split</span></button>
+                </div>
+              </fieldset>
+              <label class="theme-select-label" for="portfolio-theme" data-i18n="portfolioTheme">Tema website portofolio</label>
+              <select id="portfolio-theme" name="portfolioTheme">
+                <option value="light" data-i18n="lightTheme">Terang</option>
+                <option value="dark" data-i18n="darkTheme">Gelap</option>
+              </select>
+            </div>
+          </section>
+
+          <div class="publish-panel" id="panduan">
+            <div class="publish-copy">
+              <span class="publish-icon">↗</span>
+              <div>
+                <h2 data-i18n="readyToPublish">Siap punya website sendiri?</h2>
+                <p data-i18n="publishHint">Upload langsung ke Netlify, atau unduh file website lalu upload manual ke Netlify.</p>
+                <p class="auth-status" id="auth-status" role="status">Belum terhubung ke Netlify.</p>
+              </div>
+            </div>
+            <div class="publish-actions">
+              <button class="button button-secondary" id="download-button" type="button" data-i18n="download">Unduh file website</button>
+              <button class="button button-primary" id="netlify-button" type="button"><span data-i18n="connectNetlify">Upload ke Netlify</span> <span>↗</span></button>
+              <button class="disconnect-button" id="disconnect-button" type="button" data-i18n="disconnectNetlify" hidden>Putuskan akun Netlify</button>
+            </div>
+            <p class="publish-note" data-i18n="privacyNote">Kamu akan diminta masuk ke akun Netlify dan memberi izin untuk menerbitkan website ini.</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="preview-panel" aria-label="Preview portofolio" data-i18n-aria="previewPanel">
+        <div class="preview-toolbar">
+          <div><span class="preview-live"><i></i> <span data-i18n="livePreview">LIVE PREVIEW</span></span><span class="preview-title" data-i18n="yourWebsite">Website-mu</span></div>
+          <div class="device-switch" role="group" aria-label="Ukuran preview" data-i18n-aria="previewSize">
+            <button type="button" class="device-button selected" data-device="desktop" aria-label="Preview desktop" data-i18n-aria="desktopPreview">▰</button>
+            <button type="button" class="device-button" data-device="mobile" aria-label="Preview ponsel" data-i18n-aria="mobilePreview">▯</button>
+          </div>
+        </div>
+        <div class="preview-frame-wrap">
+          <iframe id="preview-frame" title="Preview portofolio yang sedang dibuat"></iframe>
+        </div>
+        <div class="preview-footer">
+          <span><i></i> <span data-i18n="previewSaved">Perubahan tersimpan otomatis</span></span>
+          <span data-i18n="previewLabel">DESAIN PORTOFOLIO · 01</span>
+        </div>
+        <div class="preview-tip"><span>✳</span> <span data-i18n="previewTip">Isi formulir di kiri, lihat hasilnya di sini.</span></div>
+      </aside>
+    </main>
+
+    <div class="ad-slot ad-slot-footer" aria-label="Ruang iklan">
+      <span data-i18n="adLabel">RUANG IKLAN</span>
+      <span data-i18n="adFooter">Slot iklan footer</span>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script defer src="js/shared/config.js?v=19"></script>
+    <script defer src="js/shared/runtime.js?v=18"></script>
+    <script defer src="js/features/editor.js?v=18"></script>
+    <script defer src="js/features/portfolio-preview.js?v=18"></script>
+    <script defer src="js/features/publishing.js?v=18"></script>
+    <script defer src="js/app.js?v=18"></script>
+  </body>
+</html>

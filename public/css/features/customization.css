@@ -1,0 +1,163 @@
+.customize-options {
+  display: grid;
+  gap: 19px;
+  margin-left: 31px;
+}
+
+.customize-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.customize-group legend,
+.theme-select-label {
+  margin-bottom: 9px;
+  color: #414944;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+body.dark-mode .customize-group legend,
+body.dark-mode .theme-select-label {
+  color: var(--ink);
+}
+
+.palette-options,
+.layout-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.palette-choice,
+.layout-choice {
+  display: inline-flex;
+  min-height: 37px;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.palette-choice.selected,
+.layout-choice.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgb(52 87 229 / 10%);
+}
+
+.palette-choice i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--swatch);
+}
+
+.palette-choice[data-palette="blue"] {
+  --swatch: #3457e5;
+}
+
+.palette-choice[data-palette="green"] {
+  --swatch: #477b58;
+}
+
+.palette-choice[data-palette="violet"] {
+  --swatch: #8056c7;
+}
+
+.palette-choice[data-palette="sunset"] {
+  --swatch: #dc6546;
+}
+
+.layout-choice {
+  min-width: 85px;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.layout-icon {
+  display: flex;
+  width: 40px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid #cdd1c9;
+  border-radius: 2px;
+}
+
+.layout-icon i {
+  display: block;
+  height: 13px;
+  flex: 1;
+  background: #d8dcef;
+}
+
+.layout-editorial i:first-child {
+  flex: 1.5;
+}
+
+.layout-minimal {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.layout-minimal i {
+  width: 85%;
+  height: 5px;
+  flex: none;
+}
+
+.layout-split i:first-child {
+  order: 2;
+  flex: 1.5;
+  background: #bdc9ff;
+}
+
+.theme-select-label {
+  display: block;
+  margin-bottom: -10px;
+}
+
+.customize-options select {
+  width: 180px;
+  min-height: 36px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

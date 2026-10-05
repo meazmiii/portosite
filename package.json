@@ -1,0 +1,11 @@
+{
+  "name": "portosite",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1"
+  }
+}
