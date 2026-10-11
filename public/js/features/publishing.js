@@ -38,6 +38,17 @@ function setNetlifyConnected(connected) {
 }
 
 async function checkNetlifyStatus() {
+  if (window.location.hostname.endsWith(".github.io")) {
+    netlifyReady = false;
+    const button = document.getElementById("netlify-button");
+    setNetlifyConnected(false);
+    button.disabled = true;
+    button.querySelector("[data-i18n]").textContent =
+      translate("netlifyGithubPagesButton");
+    document.getElementById("auth-status").textContent =
+      translate("netlifyGithubPagesUnavailable");
+    return;
+  }
   if (!["http:", "https:"].includes(window.location.protocol)) {
     netlifyReady = false;
     document.getElementById("auth-status").textContent =

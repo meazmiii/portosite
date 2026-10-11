@@ -23,6 +23,16 @@ bersama dimuat sebelum fitur, lalu entry point dijalankan terakhir.
 
 ## Deploy PortoSite
 
+### Versi statis di GitHub Pages
+
+Workflow GitHub Pages menerbitkan aplikasi statis dari folder `public/` di
+`https://meazmiii.github.io/portosite/`. Fitur mengisi data, melihat preview,
+dan mengunduh file portofolio tetap berfungsi. GitHub Pages tidak menjalankan
+Netlify Functions, jadi menghubungkan akun Netlify dan menerbitkan langsung
+hanya tersedia pada versi yang di-host di Netlify.
+
+### Versi lengkap di Netlify
+
 1. Masukkan folder proyek ini ke repository GitHub, lalu hubungkan repository
    tersebut ke Netlify sebagai situs baru.
 2. Netlify akan menggunakan `netlify.toml` di proyek ini. Pastikan build
